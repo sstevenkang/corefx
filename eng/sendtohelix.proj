@@ -34,7 +34,7 @@
 
   <PropertyGroup Condition="'$(MaxRetryCount)' == ''">
     <!-- In Windows we need a higher value due to some flakyness in Nano. Can remove when helix provides new containers model -->
-    <MaxRetryCount Condition="'$(TargetsWindows)' == 'true'">3</MaxRetryCount>
+    <MaxRetryCount Condition="'$(TargetsWindows)' == 'true'">9</MaxRetryCount>
     <MaxRetryCount Condition="'$(TargetsWindows)' != 'true'">1</MaxRetryCount>
   </PropertyGroup>
 
@@ -79,4 +79,5 @@
     </ItemGroup>
 
   </Target>
+
 </Project>
